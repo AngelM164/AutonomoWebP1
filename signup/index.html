@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Plataforma de Recetas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="signup.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Registro</h2>
+            <form id="signupForm" action="" method="POST">
+                <div class="input-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <button type="submit" class="btn-login">Registrarse</button>
+                <p>¿Ya tienes cuenta? <a href="../login/index.html">Inicia Sesión aquí</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

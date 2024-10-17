@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Recetas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Referencia al archivo CSS -->
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">Sabores del Mundo</div>
+        <input type="text" id="searchInput" placeholder="Buscar recetas...">
+    </nav>
+
+    <div class="container">
+        <aside id="leftSidebar">
+            <ul>
+                <li><a href="../feed/index.html" data-section="inicio">Inicio</a></li>
+                <li><a href="#" data-section="perfil">Mi perfil</a></li>
+                <li><a href="#" data-section="recetas">Recetas compartidas</a></li>
+                <li><a href="#" data-section="favoritos">Favoritos</a></li>
+                <li><a href='../inicio/index.html'>Cerrar sesión</a></li>
+            </ul>
+        </aside>
+
+        <main id="mainContent">
+            <section id="inicio" style="display: none;">
+                <h2>Bienvenido a la Plataforma de Recetas</h2>
+                <p>Encuentra y comparte tus recetas favoritas aquí.</p>
+            </section>
+
+            <section id="perfil" style="display: none;">
+                <h2>Mi Perfil</h2>
+                <p>Aquí puedes ver y editar tu información de perfil.</p>
+            </section>
+
+            <section id="recetas" style="display: none;">
+                <!-- Formulario para compartir recetas -->
+                <form id="recipeForm">
+                    <h2>Compartir Receta</h2>
+                    <label for="title">Título de la receta:</label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="ingredients">Ingredientes (separados por comas):</label>
+                    <textarea id="ingredients" name="ingredients" required></textarea>
+
+                    <label for="steps">Pasos:</label>
+                    <textarea id="steps" name="steps" required></textarea>
+
+                    <button type="submit">Compartir Receta</button>
+                </form>
+
+                <!-- Mostrar las recetas compartidas -->
+                <div id="recipeList">
+                    <h2>Recetas Compartidas:</h2>
+                </div>
+            </section>
+
+            <section id="favoritos" style="display: none;">
+                <h2>Mis Recetas Favoritas</h2>
+                <p>Aquí puedes ver las recetas que has marcado como favoritas.</p>
+            </section>
+        </main>
+
+        <!-- Barra lateral derecha (para funcionalidades adicionales) -->
+        <aside id="rightSidebar">
+            <h3>Recetas Populares</h3>
+            <ul id="popularRecipes">
+                <li><a  href="#">Salchipapa</a></li>
+            </ul>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Recetas Social. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Asegúrate de tener este archivo JavaScript -->
+</body>
+</html>
